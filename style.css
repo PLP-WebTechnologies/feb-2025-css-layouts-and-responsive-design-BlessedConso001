@@ -1,0 +1,134 @@
+/* <!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Flexbox and Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="grid-item">
+            <h1>Welcome to Our Website</h1>
+            <p>This is a responsive layout using Flexbox and Grid.</p>
+        </section>
+
+        <section id="about" class="grid-item">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best service.</p>
+        </section>
+
+        <section id="services" class="grid-item">
+            <h2>Our Services</h2>
+            <p>Explore our range of services tailored for you.</p>
+        </section>
+
+        <section id="contact" class="grid-item">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Responsive Layout. All rights reserved.</p>
+    </footer> */
+
+/* CSS Reset */
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* Reset default browser styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-list li {
+    display: inline;
+}
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+.nav-list a:hover {
+    background: #e8491d;
+    border-radius: 5px;
+}
+/* Main Container Styles */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+    border: 2px solid #2e7861;
+}
+
+.grid-item {
+    background-color: #004e4d;
+    padding: 20px;
+    border: 6px solid #e8491d;
+    border-radius: 5px;
+    color: #236827;
+    color: #1f0606;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Footer Styles */
+.footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Responsive Styles */ 
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+/* End of CSS Reset */
+
